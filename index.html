@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intervenção Corinthians</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <iframe src="https://intervencaocorinthians.figma.site/" title="Intervenção Corinthians"></iframe>
+
+    <script>
+        // BLOQUEIA clique direito
+        window.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert("Clique direito desativado");
+        });
+
+        // BLOQUEIA atalhos de inspecionar
+        window.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+                (e.ctrlKey && e.key.toLowerCase() === 'u')
+            ) {
+                e.preventDefault();
+                alert("Ação desativada");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
