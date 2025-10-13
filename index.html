@@ -27,25 +27,7 @@
 
     <iframe src="https://intervencaocorinthians.figma.site/" title="Intervenção Corinthians"></iframe>
 
-    <script>
-        // BLOQUEIA clique direito
-        window.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            alert("Clique direito desativado");
-        });
 
-        // BLOQUEIA atalhos de inspecionar
-        window.addEventListener('keydown', function (e) {
-            if (
-                e.key === 'F12' ||
-                (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-                (e.ctrlKey && e.key.toLowerCase() === 'u')
-            ) {
-                e.preventDefault();
-                alert("Ação desativada");
-            }
-        });
-    </script>
 
 </body>
 
